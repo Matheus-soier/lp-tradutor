@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Tradutor</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="shortcut icon" href="assets/images/favicon.ico" type="image/x-icon">
+    <!-- Inclua o Axios via CDN antes do seu script principal -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="assets/js/main.js" defer></script>
+</head>
+<body>
+    <header>
+        <div>
+            <img src="assets/images/logo.png" alt="Logo google" width="75px">
+            <span>tradutor</span>
+        </div>
+        <div>
+            <img src="assets/images/avatar.png" alt="avatar usuário" width="45px">
+        </div>
+    </header>
+    <main>
+        <section>
+            <div class="container-lang">
+                <div>
+                    <input type="radio" name="source-lang" value="pt" checked>
+                    <span>português</span>
+                </div>
+            </div>
+            <textarea id="source-text"></textarea>
+        </section>
+        <section>
+            <div>
+                <div class="container-lang">
+                    <div>
+                        <input type="radio" name="target-lang" value="en" checked onchange="handleTyping()">
+                        <span>Inglês</span>
+                    </div>
+                   <div>
+                    <input type="radio" name="target-lang" value="es" onchange="handleTyping()">
+                    <span>Espanhol</span>
+                   </div>
+                </div>
+            </div>
+            <textarea id="target-text" readonly>Tradução</textarea>
+        </section>
+    </main>
+</body>
+</html>
